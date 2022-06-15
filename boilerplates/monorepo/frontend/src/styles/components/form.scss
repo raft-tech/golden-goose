@@ -1,0 +1,28 @@
+@import '../vendors/va-design';
+
+form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  .form-input {
+    width: 250px;
+
+    div label {
+      text-align: initial;
+    }
+  }
+
+  .button-grp {
+    display: inherit;
+    margin-top: 10px;
+    button {
+      margin-top: 10px;
+    }
+
+    a:hover {
+      background-color: $color-white;
+    }
+  }
+}

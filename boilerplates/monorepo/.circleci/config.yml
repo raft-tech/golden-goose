@@ -1,0 +1,51 @@
+version: 2.1
+
+orbs:
+  aws-ecr: circleci/aws-ecr@6.12.2
+  aws-ecs: circleci/aws-ecs@1.3.0
+
+workflows:
+  build-and-deploy:
+    jobs:
+      - aws-ecr/build-and-push-image:
+          repo: "${AWS_RESOURCE_NAME_PREFIX}"
+          tag: frontend-"${CIRCLE_SHA1}"
+          path: frontend
+          filters:
+            branches:
+              only:
+                - master
+
+      - aws-ecs/deploy-service-update:
+          requires:
+            - aws-ecr/build-and-push-image # only run this job once aws-ecr/build-and-push-image has completed
+          family: "${AWS_RESOURCE_NAME_PREFIX}-service"
+          cluster-name: "${AWS_RESOURCE_NAME_PREFIX}-cluster"
+          container-image-name-updates: "container=${AWS_RESOURCE_NAME_PREFIX}-service,tag=frontend-${CIRCLE_SHA1}"
+          filters:
+            branches:
+              only:
+                - master
+
+  build-and-deploy-dev:
+    jobs:
+
+      - aws-ecr/build-and-push-image:
+          repo: "${AWS_RESOURCE_NAME_PREFIX}"
+          tag: frontend-"${CIRCLE_SHA1}"
+          path: frontend
+          filters:
+            branches:
+              only:
+                - dev
+
+      - aws-ecs/deploy-service-update:
+          requires:
+            - aws-ecr/build-and-push-image # only run this job once aws-ecr/build-and-push-image has completed
+          family: "${AWS_RESOURCE_NAME_PREFIX_DEV}-service"
+          cluster-name: "${AWS_RESOURCE_NAME_PREFIX_DEV}-cluster"
+          container-image-name-updates: "container=${AWS_RESOURCE_NAME_PREFIX_DEV}-service,tag=frontend-${CIRCLE_SHA1}"
+          filters:
+            branches:
+              only:
+                - dev

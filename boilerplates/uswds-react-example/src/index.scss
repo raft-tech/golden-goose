@@ -1,0 +1,27 @@
+/*
+* * * * * ==============================
+* * * * * ==============================
+* * * * * ==============================
+* * * * * ==============================
+========================================
+========================================
+========================================
+*/
+
+// -------------------------------------
+// Import individual theme settings
+
+@import "./assets/uswds-2.9.0/scss/theme/uswds-theme-general";
+@import "./assets/uswds-2.9.0/scss/theme/uswds-theme-typography";
+@import "./assets/uswds-2.9.0/scss/theme/uswds-theme-spacing";
+@import "./assets/uswds-2.9.0/scss/theme/uswds-theme-color";
+@import "./assets/uswds-2.9.0/scss/theme/uswds-theme-utilities"; 
+
+
+// components import needs to be last
+@import "./assets/uswds-2.9.0/scss/theme/uswds-theme-components";
+
+// -------------------------------------
+// Import theme custom styles
+
+@import "./assets/stylesheets/_uswds-theme-custom-styles"

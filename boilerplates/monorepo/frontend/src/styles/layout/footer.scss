@@ -1,0 +1,40 @@
+footer {
+  background-color: $color-primary-darkest;
+  color: $color-white;
+  width: 100%;
+  position: absolute;
+  // bottom: 0;
+  overflow-x: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+
+  ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+
+    li {
+      padding: 10px;
+      text-align: center;
+      border-right: 1px solid $color-white;
+      font-size: 12px;
+
+      a {
+        text-decoration: none;
+        cursor: pointer;
+        color: $color-white !important;
+      }
+
+      a:hover {
+        color: $color-gold;
+      }
+    }
+
+    .last-item {
+      border-right: 1px solid $color-primary-darkest;
+    }
+  }
+}
+

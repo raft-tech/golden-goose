@@ -1,0 +1,117 @@
+@import '../vendors/va-design';
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  // overflow-y: hidden;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+.App {
+  // text-align: center;
+}
+
+.main {
+  display: flex;
+  justify-content: center;
+}
+
+.page {
+  padding: 0 units(5);
+}
+
+.categories {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: center;
+  margin-top: units(5);
+
+  a {
+    text-decoration: none;
+  }
+}
+
+.category-tile {
+  width: 130px;
+  height: 100px;
+  border: 1px solid $color-primary-alt-darkest;
+  border-radius: 25px;
+  cursor: pointer;
+  margin: units(2.5);
+  padding: units(1.5);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-self: center;
+  h4 {
+    margin: 0px;
+  }
+}
+
+.page {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.wizard {
+  width: 100%;
+  // position: absolute;
+  // bottom: 0;
+  // overflow-x: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100px;
+  background: $color-white;
+  border: 1px solid $color-primary-alt-darkest;
+  margin-top: units(5);
+}
+
+.checkbox {
+  display: flex;
+}
+
+.form-radio-buttons {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: units(2.5);
+
+  p {
+    text-align: initial
+  }
+
+  .radio-button {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+.results-header {
+  display: flex;
+  align-items: center;
+  margin-top: units(5);
+
+  .danger {
+    color: $color-secondary-dark;
+  }
+
+  .clear {
+    color: $color-green
+  }
+
+  h6 {
+    padding-left: units(5);
+  }
+}

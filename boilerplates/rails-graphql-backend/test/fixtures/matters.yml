@@ -1,0 +1,17 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  description: MyString
+  status: MyString
+  permitted_states: 
+  representation: MyString
+  Notes: one
+  adverse_party: one
+
+two:
+  description: MyString
+  status: MyString
+  permitted_states: 
+  representation: MyString
+  Notes: two
+  adverse_party: two

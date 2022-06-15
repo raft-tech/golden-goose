@@ -1,0 +1,41 @@
+@import '../vendors/va-design';
+@import "~@department-of-veterans-affairs/formation/sass/site/m-vet-nav";
+
+.header {
+  background-color: $color-primary-darkest;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
+  .buttons {
+    display: flex;
+    border-bottom: 1px solid $color-white;
+    justify-content: flex-end;
+    width: 75%;
+
+    .primary {
+      background-color: $color-blue;
+      color: $color-white;
+      margin-right: 10px;
+    }
+
+    .usa-button-secondary {
+      background-color: $color-white;
+    }
+  }
+
+  .login-container {
+    width: 75%;
+  }
+
+  ul {
+    li:hover {
+      border-bottom: 2px solid $color-gold;
+    }
+
+    li a {
+      color: $color-white !important;
+    }
+  }
+}

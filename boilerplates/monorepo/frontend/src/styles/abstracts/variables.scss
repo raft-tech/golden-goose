@@ -1,0 +1,4 @@
+// variable overrides
+$formation-asset-path: '~@department-of-veterans-affairs/formation/assets' !default;
+$formation-image-path: "#{$formation-asset-path}/img" !default;
+$formation-font-path: "#{$formation-asset-path}/fonts" !default;

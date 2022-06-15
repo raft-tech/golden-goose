@@ -1,0 +1,18 @@
+#UserData {
+  padding: 1rem 2rem;
+  margin: 0 auto;
+
+  h1 {
+    text-align: center;
+    font-size: 1.5rem;
+  }
+
+  .user-field {
+    margin: 1rem 0;
+  }
+
+  .errors {
+    h1 { color: orange; }
+    p { text-align: center; }
+  }
+}

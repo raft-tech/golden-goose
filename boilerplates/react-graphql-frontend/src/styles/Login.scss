@@ -1,0 +1,99 @@
+@import './App.scss';
+
+#LoginForm {
+  width: 100%;
+  height: 100vh;
+  background-size: cover;
+  color: white;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  background-image: url('../images/login-background.jpg');
+
+  h1 {
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+    font-weight: 500;
+  }
+
+  #LoginLogo {
+    max-width: 200px;
+    width: 100%;
+    margin-bottom: 2rem;
+  }
+
+  #LoginButton {
+    margin: 2rem auto 1rem;
+    text-align: center;
+    align-self: center;
+    width: 70%;
+    max-width: 300px;
+    font-weight: 500;
+    background-color: darkgreen;
+    color: white;
+
+    &:hover {
+      background-color: rgb(38, 138, 38);
+    }
+  }
+
+  .formError,
+  .errors {
+    color: rgb(160, 31, 31);
+    font-size: 1.5rem;
+    background: black;
+    padding: 0.5rem;
+    border-radius: 10px;
+    text-align: center;
+  }
+}
+
+.form-input {
+  display: flex;
+  flex-flow: column nowrap;
+  width: 90%;
+  max-width: 500px;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 1rem;
+
+  label {
+    padding: 1rem 0;
+    width: 100%;
+    color: lightgrey;
+  }
+
+  input {
+    margin: 0.5rem 0;
+    width: 100%;
+    border: 0;
+    border-bottom: 1px solid white;
+    background: transparent;
+    color: white;
+    font-size: 1.5rem;
+  }
+
+  input:-webkit-autofill,
+  input:-webkit-autofill:hover,
+  input:-webkit-autofill:focus,
+  textarea:-webkit-autofill,
+  textarea:-webkit-autofill:hover,
+  textarea:-webkit-autofill:focus,
+  select:-webkit-autofill,
+  select:-webkit-autofill:hover,
+  select:-webkit-autofill:focus {
+    -webkit-text-fill-color: white;
+    -webkit-box-shadow: 0 0 0px 1000px rgba(0, 0, 0, 0.01) inset;
+    transition: background-color 5000s ease-in-out 0s;
+  }
+
+  @media (min-width: $tablet) {
+    label,
+    input {
+      width: 90%;
+      margin: 0 auto;
+    }
+  }
+}
